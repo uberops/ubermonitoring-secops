@@ -1,0 +1,37 @@
+---
+apiVersion: "v1"
+data:
+  hubot-jenkins-url: "http://jenkins.default.svc.cluster.local"
+  hubot-hipchat-token: ""
+  hubot-hipchat-xmpp-domain: "btf.hipchat.com"
+  hubot-hipchat-host: ""
+  hubot-hipchat-password: ""
+  hubot-hipchat-jid: ""
+  hubot-hipchat-grafana-host: "http://grafana.default.svc.cluster.local"
+  hubot-hipchat-grafana-api-key: ""
+kind: "ConfigMap"
+metadata:
+  annotations:
+    fabric8.io/json-schema: "{\n  \"type\" : \"object\",\n  \"properties\" : {\n \
+      \   \"HUBOT_HIPCHAT_GRAFANA_HOST\" : {\n      \"type\" : \"string\",\n      \"\
+      description\" : \"Host for your Grafana 2.0 install, e.g. 'http://play.grafana.org'\"\
+      ,\n      \"default\" : \"http://grafana.default.svc.cluster.local\"\n    },\n\
+      \    \"HUBOT_HIPCHAT_GRAFANA_API_KEY\" : {\n      \"type\" : \"string\",\n   \
+      \   \"description\" : \"API key for a particular user\"\n    },\n    \"HUBOT_JENKINS_URL\"\
+      \ : {\n      \"type\" : \"string\",\n      \"description\" : \"The URL for the\
+      \ Jenkins CI server\",\n      \"default\" : \"http://jenkins.default.svc.cluster.local\"\
+      \n    },\n    \"HUBOT_HIPCHAT_TOKEN\" : {\n      \"type\" : \"string\",\n    \
+      \  \"description\" : \"The token for Hubot to login to Hipchat\"\n    }\n  }\n\
+      }"
+  labels:
+    name: "hubot-hipchat"
+  name: "hubot-hipchat"
+data:
+  hubot-jenkins-url: "http://jenkins/"
+  hubot-grafana-host: "${HUBOT_GRAFANA_HOST}"
+  hubot-hipchat-token: "${HUBOT_HIPCHAT_TOKEN}"
+  hubot-grafana-api-key: "${HUBOT_HIPCHAT_GRAFANA_API_KEY}"
+  hubot-hipchat-xmpp-domain: "${HUBOT_HIPCHAT_XMPP_DOMAIN}"
+  hubot-hipchat-host: "${HUBOT_HIPCHAT_HOST}"
+  hubot-hipchat-password: "${HUBOT_HIPCHAT_PASSWORD}"
+  hubot-hipchat-jid: "${HUBOT_HIPCHAT_JID}"

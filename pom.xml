@@ -201,6 +201,7 @@
     <module>upgrade-job</module>
     <module>validator-job</module>
     <module>packages</module>
+    <module>../../Documents/workspace2/hubot-victorops</module>
   </modules>
 
   <build>

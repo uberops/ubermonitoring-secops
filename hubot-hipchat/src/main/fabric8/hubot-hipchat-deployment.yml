@@ -1,0 +1,65 @@
+---
+apiVersion: "extensions/v1beta1"
+kind: "Deployment"
+metadata:
+  labels:
+    name: "hubot-hipchat"
+  name: "hubot-hipchat"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: "hubot-hipchat"
+  template:
+    metadata:
+      labels:
+        name: "hubot-hipchat"
+      name: "hubot-hipchat"
+    spec:
+      containers:
+      - env:
+        - name: "HUBOT_GRAFANA_API_KEY"
+          valueFrom:
+            configMapKeyRef:
+              key: "hubot-grafana-api-key"
+              name: "hubot-hipchat"
+        - name: "HUBOT_HIPCHAT_JID"
+          valueFrom:
+            configMapKeyRef:
+              key: "hubot-hipchat-jid"
+              name: "hubot-hipchat"
+        - name: "HUBOT_HIPCHAT_PASSWORD"
+          valueFrom:
+            configMapKeyRef:
+              key: "hubot-hipchat-password"
+              name: "hubot-hipchat"
+        - name: "HUBOT_HIPCHAT_HOST"
+          valueFrom:
+            configMapKeyRef:
+              key: "hubot-hipchat-host"
+              name: "hubot-hipchat"
+        - name: "HUBOT_HIPCHAT_XMPP_DOMAIN"
+          valueFrom:
+            configMapKeyRef:
+              key: "hubot-hipchat-xmpp-domain"
+              name: "hubot-hipchat"
+        - name: "HUBOT_HIPCHAT_AUTH_TOKEN"
+          valueFrom:
+            configMapKeyRef:
+              key: "hubot-hipchat-token"
+              name: "hubot-hipchat"
+        - name: "HUBOT_GRAFANA_HOST"
+          valueFrom:
+            configMapKeyRef:
+              key: "hubot-grafana-host"
+              name: "hubot-hipchat"
+        - name: "HUBOT_JENKINS_URL"
+          valueFrom:
+            configMapKeyRef:
+              key: "hubot-jenkins-url"
+              name: "hubot-hipchat"
+        image: "fabric8/hubot-hipchat:${project.version}"
+        name: "hubot-hipchat"
+        ports:
+        - containerPort: 8080
+          protocol: "TCP"

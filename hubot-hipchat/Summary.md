@@ -1,0 +1,1 @@
+[Hubot](https://hubot.github.com/) adapter to use with [HipChat](https://HipChat.com/)
