@@ -58,7 +58,7 @@ spec:
             configMapKeyRef:
               key: "hubot-jenkins-url"
               name: "hubot-hipchat"
-        image: "fabric8/hubot-hipchat:${project.version}"
+        image: "docker.ubermonitoring.com/ubermonitoring.io/hubot-hipchat:${project.version}"
         name: "hubot-hipchat"
         ports:
         - containerPort: 8080

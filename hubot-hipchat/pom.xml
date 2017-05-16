@@ -21,8 +21,8 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>io.fabric8.devops.apps</groupId>
-    <artifactId>fabric8-devops</artifactId>
+    <groupId>io.ubermonitoring.secops.apps</groupId>
+    <artifactId>ubermonitoring-secops</artifactId>
     <version>2.2-SNAPSHOT</version>
   </parent>
 
@@ -95,4 +95,8 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  <organization>
+  	<name>UberMonitoring</name>
+  	<url>https://ubermonitoring.com</url>
+  </organization>
 </project>
