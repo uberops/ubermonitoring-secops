@@ -18,14 +18,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <parent>
-    <groupId>com.uberops</groupId>
-    <version>9</version>
-  </parent>
 
-  <groupId>io.ubermonitoring.secops.apps</groupId>
-  <artifactId>ubermonitoring-secop</artifactId>
-  <version>2.2-SNAPSHOT</version>
+  <groupId>io.ubermonitoring</groupId>
+  <artifactId>secops-apps</artifactId>
   <packaging>pom</packaging>
 
   <name>UberMonitoring SecOps</name>
@@ -34,8 +29,8 @@
   <inceptionYear>2015</inceptionYear>
 
   <organization>
-    <name>Red Hat</name>
-    <url>http://redhat.com</url>
+    <name>UberOps</name>
+    <url>http://uberops.com</url>
   </organization>
 
   <licenses>
@@ -62,10 +57,10 @@
   </developers>
 
   <scm>
-    <connection>scm:git:git@github.com:fabric8io/fabric8-devops.git</connection>
-    <developerConnection>scm:git:git@github.com:fabric8io/fabric8-devops.git</developerConnection>
-    <url>http://github.com/fabric8io/fabric8-devops</url>
-    <tag>fabric8-devops-2.0.1</tag>
+    <connection>scm:git:git@github.com:uberops/ubermonitoring-secops.git</connection>
+    <developerConnection>scm:git:git@github.com:uberops/ubermonitoring-secops.git</developerConnection>
+    <url>http://github.com/uberops/ubermonitoring-secops</url>
+    <tag>ubermonitoring-secops-2.0.1</tag>
   </scm>
 
   <properties>
@@ -500,4 +495,5 @@
       </properties>
     </profile>
   </profiles>
+  <version>2.2-SNAPSHOT</version>
 </project>
